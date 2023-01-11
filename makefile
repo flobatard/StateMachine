@@ -13,11 +13,10 @@ BIN=bin$(SEP)
 LIB=lib$(SEP)
 DISTR=distr$(SEP)
 
-SOURCES=StateMachine.cpp
+SOURCES=StateMachine.cpp Pipe.cpp State.cpp Guard.cpp PrintingPipeExample.cpp StateMachineExample.cpp PrintingStateExample.cpp ForbidGuard.cpp 
 OBJS=$(SOURCES:%.cpp=%.o)
 PATHOBJS=$(OBJS:%=$(OBJ)%)
-WARNINGS=-Wall -Wextra -pedantic -ansi
-
+WARNINGS=-Wall -Wextra -pedantic -ansi -std=c++11
 LIBS=
 
 FLAGS= $(WARNINGS) -I$(HEADERDIR) -I$(INCLUDESDIR) -L$(LIB)
